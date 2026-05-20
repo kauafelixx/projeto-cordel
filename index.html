@@ -1,111 +1,241 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Cordel</title>
+    <meta name="description"
+        content="Acervo visual inspirado na literatura de cordel e na poesia nordestina brasileira.">
+    <title>Cordel Nordestino</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Cordel Moderno</h1>
-        <p>Por <a href="https://www.recantodasletras.com.br/poesias/3186743" target="_blank">Milton Duarte</a></p>
+    <header class="hero" id="inicio">
+        <nav class="topbar" aria-label="Navegação principal">
+            <a class="brand" href="#inicio">Cordel Nordestino</a>
+            <div class="menu">
+                <a href="#cordel-moderno">Cordel</a>
+                <a href="#autores">Autores</a>
+                <a href="#creditos">Créditos</a>
+            </div>
+        </nav>
 
+        <div class="hero__content">
+            <p class="eyebrow">Literatura popular brasileira</p>
+            <h1>Cordel, sertão e palavra cantada.</h1>
+            <p>
+                Um acervo visual dedicado aos versos populares, às vozes do Nordeste e à força
+                das histórias que atravessam feira, roça, carta, viola e memória.
+            </p>
+            <a class="button" href="#cordel-moderno">Ler cordel</a>
+        </div>
     </header>
 
-    <section class="normal">
-        <p>
-            Estou ficando cansado <br>
-            Da tal tecnologia <br>
-            Só se fala por e-mail <br>
-            Mensagem curta e fria <br>
-            Twitter e Facebook <br>
-            Antes que eu caduque <br>
-            Vou dizer tudo em poesia. <br>
-        </p>
-    </section>
+    <main>
+        <section class="intro" aria-labelledby="intro-title">
+            <div>
+                <p class="eyebrow">Folheto aberto</p>
+                <h2 id="intro-title">Da tradição oral à tela</h2>
+            </div>
+            <p>
+                A poesia de cordel nasce do encontro entre ritmo, imagem e povo. Aqui, cada
+                leitura ganha espaço de respiro, contraste e textura, como se o folheto tivesse
+                sido aberto sobre a mesa.
+            </p>
+        </section>
 
+        <section class="poem poem--feature" id="cordel-moderno" aria-labelledby="cordel-title">
+            <div class="poem__header">
+                <p class="eyebrow">Poema completo</p>
+                <h2 id="cordel-title">Cordel Moderno</h2>
+                <p>
+                    Por
+                    <a href="https://www.recantodasletras.com.br/poesias/3186743" target="_blank"
+                        rel="noopener noreferrer">Milton Duarte</a>
+                </p>
+            </div>
 
+            <div class="stanzas">
+                <p>
+                    Estou ficando cansado<br>
+                    Da tal tecnologia<br>
+                    Só se fala por e-mail<br>
+                    Mensagem curta e fria<br>
+                    Twitter e Facebook<br>
+                    Antes que eu caduque<br>
+                    Vou dizer tudo em poesia.
+                </p>
 
-    <section class="imagem" id="img1">
-        <p>
-            Não é mais como era antes <br>
-            É tudo abreviado <br>
-            "Você" só tem duas letras <br>
-            O "O" e o "E" foi riscado <br>
-            Para declarar o amor <br>
-            Basta botar uma flor <br>
-            E um coração desenhado. <br>
-        </p>
-    </section>
+                <p>
+                    Não é mais como era antes<br>
+                    É tudo abreviado<br>
+                    "Você" só tem duas letras<br>
+                    O "O" e o "E" foi riscado<br>
+                    Para declarar o amor<br>
+                    Basta botar uma flor<br>
+                    E um coração desenhado.
+                </p>
 
+                <p>
+                    Arroba agora não pesa<br>
+                    É parte de um endereço<br>
+                    Ponto final nem se usa<br>
+                    Ou vai até no começo<br>
+                    Agora é .com<br>
+                    Se o saite é muito bom<br>
+                    Ele vale um alto preço.
+                </p>
 
+                <p>
+                    Pra piorar a liguagem<br>
+                    O emoticom é um risco<br>
+                    Tem símbolo para tudo<br>
+                    Ponto e vírgula e um asterisco<br>
+                    Um beijo significa<br>
+                    Pra entender como fica<br>
+                    Decifre esse rabisco.
+                </p>
 
-    <section class="normal">
-        <p>
-            Arroba agora não pesa <br>
-            É parte de um endereço <br>
-            Ponto final nem se usa <br>
-            Ou vai até no começo <br>
-            Agora é .com <br>
-            Se o saite é muito bom <br>
-            Ele vale um alto preço. <br>
-        </p>
+                <p>
+                    Tenho saudade das cartas<br>
+                    Escritas com a própria mão<br>
+                    Mandava no mês de Junho<br>
+                    Só chegava no Verão<br>
+                    Mas matava a saudade<br>
+                    Era texto de verdade<br>
+                    Nas linhas do coração.
+                </p>
 
-        <p> Pra piorar a liguagem <br>
-            O emoticom é um risco <br>
-            Tem símbolo para tudo <br>
-            Ponto e vírgula e um asterisco <br>
-            Um beijo significa <br>
-            Pra entender como fica <br>
-            Decifre esse rabisco. <br>
-        </p>
-    </section>
+                <p>
+                    Agora, escrevo e envio<br>
+                    Chegando na mesma hora<br>
+                    Mas quando vou prosear<br>
+                    A pessoa foi embora<br>
+                    Abriu outro aplicativo<br>
+                    O mundo ficou cativo<br>
+                    Da tecnologia do agora.
+                </p>
 
+                <p>
+                    Felizmente, pra orar<br>
+                    Não precisa de internet<br>
+                    Deus escuta todo mundo<br>
+                    Se quiser, faça esse teste<br>
+                    Dois pontos são dois joelhos<br>
+                    Seus lábios são aparelhos<br>
+                    Deixe que Deus interprete.
+                </p>
+            </div>
+        </section>
 
+        <section class="image-band image-band--first" aria-label="Paisagem literária nordestina">
+            <div>
+                <p class="eyebrow">Vozes do Nordeste</p>
+                <h2>Entre carta, viola, feira e palavra cantada.</h2>
+            </div>
+        </section>
 
-    <section class="imagem" id="img2">
-        <p>Tenho saudade das cartas <br>
-            Escritas com a própria mão <br>
-            Mandava no mês de Junho <br>
-            Só chegava no Verão <br>
-            Mas matava a saudade <br>
-            Era texto de verdade <br>
-            Nas linhas do coração. <br>
-        </p>
-    </section>
+        <section class="authors" id="autores" aria-labelledby="authors-title">
+            <div class="section-heading">
+                <p class="eyebrow">Autores em destaque</p>
+                <h2 id="authors-title">Vozes que atravessam o sertão</h2>
+                <p>
+                    Uma seleção de obras e autores que ajudam a entender a poesia nordestina:
+                    sua oralidade, sua crítica social, sua fé, seu humor e sua imaginação.
+                </p>
+            </div>
 
+            <div class="poem-grid">
+                <article class="literary-card">
+                    <span>Patativa do Assaré</span>
+                    <h3>A triste partida</h3>
+                    <p>
+                        O drama da seca e da migração aparece em versos de forte musicalidade,
+                        acompanhando a família que deixa sua terra em busca de sobrevivência.
+                    </p>
+                    <a href="https://brasilescola.uol.com.br/biografia/patativa-do-assare.htm" target="_blank"
+                        rel="noopener noreferrer">Conhecer obra</a>
+                </article>
 
+                <article class="literary-card">
+                    <span>Patativa do Assaré</span>
+                    <h3>Ao leitô</h3>
+                    <p>
+                        Um chamado direto ao leitor, em tom simples e firme, que apresenta a
+                        poesia como verdade da vida no campo e da fala popular.
+                    </p>
+                    <a href="https://brasilescola.uol.com.br/biografia/patativa-do-assare.htm" target="_blank"
+                        rel="noopener noreferrer">Conhecer obra</a>
+                </article>
 
-    <section class="normal">
+                <article class="literary-card">
+                    <span>Patativa do Assaré</span>
+                    <h3>O poeta da roça</h3>
+                    <p>
+                        A voz do trabalhador rural toma a palavra para cantar a roça, a dureza
+                        do cotidiano e a dignidade de quem vive da própria mão.
+                    </p>
+                    <a href="https://brasilescola.uol.com.br/biografia/patativa-do-assare.htm" target="_blank"
+                        rel="noopener noreferrer">Conhecer obra</a>
+                </article>
 
-        <p>
-            Agora, escrevo e envio <br>
-            Chegando na mesma hora <br>
-            Mas quando vou prosear <br>
-            A pessoa foi embora <br>
-            Abriu outro aplicativo <br>
-            O mundo ficou cativo <br>
-            Da tecnologia do agora. <br>
-        </p>
+                <article class="literary-card literary-card--dark">
+                    <span>Ariano Suassuna</span>
+                    <h3>A infância</h3>
+                    <p>
+                        Memória, infância e destino se misturam em imagens fortes, criando um
+                        sertão simbólico, solar e profundamente pessoal.
+                    </p>
+                    <a href="https://www.culturagenial.com/poemas-ariano-suassuna/" target="_blank"
+                        rel="noopener noreferrer">Conhecer obra</a>
+                </article>
 
-        <p>
-            Felizmente, pra orar <br>
-            Não precisa de internet <br>
-            Deus escuta todo mundo <br>
-            Se quiser, faça esse teste <br>
-            Dois pontos são dois joelhos <br>
-            Seus lábios são aparelhos <br>
-            Deixe que Deus interprete. <br>
-        </p>
+                <article class="literary-card literary-card--dark">
+                    <span>Ariano Suassuna</span>
+                    <h3>O mundo do sertão</h3>
+                    <p>
+                        O sertão aparece como território de sonho, mito e combate, atravessado
+                        por imagens de pedra, sol, bicho, sangue e sagrado.
+                    </p>
+                    <a href="https://www.culturagenial.com/poemas-ariano-suassuna/" target="_blank"
+                        rel="noopener noreferrer">Conhecer obra</a>
+                </article>
+            </div>
+        </section>
 
-    </section>
+        <section class="image-band image-band--second" aria-label="Folhas e memória">
+            <div>
+                <p class="eyebrow">Memória gráfica</p>
+                <h2>Papel, tinta, sombra e ritmo de leitura.</h2>
+            </div>
+        </section>
+
+        <section class="credits" id="creditos" aria-labelledby="credits-title">
+            <p class="eyebrow">Créditos</p>
+            <h2 id="credits-title">Acervo e fontes</h2>
+            <div class="credits__grid">
+                <p>
+                    O poema <strong>Cordel Moderno</strong> é de autoria de Milton Duarte e foi
+                    apresentado com crédito e link para a publicação original.
+                </p>
+                <p>
+                    Patativa do Assaré e Ariano Suassuna aparecem como referências essenciais
+                    para a poesia popular, o imaginário sertanejo e a literatura nordestina.
+                </p>
+                <p>
+                    Curadoria visual e página por
+                    <a href="https://www.instagram.com/kauafelix.dev/" target="_blank" rel="noopener noreferrer">Kauã Felix</a>,
+                    com base nos estudos do
+                    <a href="https://www.cursoemvideo.com/" target="_blank" rel="noopener noreferrer">Curso em Vídeo</a>.
+                </p>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>Site criado por<a href="https://github.com/kauafelixx" target="_blank"> Kauã felix</a> no <a
-                href="https://www.cursoemvideo.com/" target="_blank">CursoemVideo</a></p>
+        <p>Cordel Nordestino | Acervo literário visual</p>
+        <a href="#inicio">Voltar ao topo</a>
     </footer>
 </body>
 

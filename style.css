@@ -1,106 +1,475 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&family=Passion+One:wght@400;700;900&family=Rubik+Mono+One&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&family=Passion+One:wght@400;700;900&family=Rubik+Mono+One&family=Sriracha&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&family=Spectral:wght@400;500;600;700&display=swap");
 
 :root {
-    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
-    --fonte2: "Passion One", sans-serif;
-    --fonte3: "Sriracha", cursive;
+    --paper: #f7efd9;
+    --paper-deep: #ead9b1;
+    --ink: #241510;
+    --muted: #725642;
+    --coal: #17100d;
+    --terra: #9f4326;
+    --cacto: #2f6248;
+    --anil: #27596a;
+    --sun: #d9942b;
+    --white: #fffaf0;
+    --shadow: 0 24px 70px rgba(36, 21, 16, 0.22);
+    --radius: 8px;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: darkgray;
     min-height: 100vh;
-    font-family: var(--fonte1);
+    background:
+        radial-gradient(circle at 18% 8%, rgba(217, 148, 43, 0.2), transparent 28rem),
+        radial-gradient(circle at 88% 18%, rgba(47, 98, 72, 0.14), transparent 24rem),
+        radial-gradient(circle at 12% 86%, rgba(39, 89, 106, 0.12), transparent 28rem),
+        linear-gradient(135deg, rgba(36, 21, 16, 0.08) 25%, transparent 25%) 0 0 / 28px 28px,
+        var(--paper);
+    color: var(--ink);
+    font-family: "Spectral", Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-header {
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-
-header>h1 {
-    padding-top: 50px;
-    font-variant: small-caps;
-    font-family: var(--fonte2);
-    font-size: 8vw;
-
-}
-
-header>p {
-    padding-bottom: 50px;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.32;
+    background-image:
+        linear-gradient(rgba(36, 21, 16, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(36, 21, 16, 0.05) 1px, transparent 1px);
+    background-size: 42px 42px;
+    pointer-events: none;
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
+    color: inherit;
+    font-weight: 700;
+    text-decoration-color: rgba(159, 67, 38, 0.5);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.22em;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--terra);
+}
+
+.hero {
+    min-height: 92vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    color: var(--white);
+    background:
+        linear-gradient(90deg, rgba(23, 16, 13, 0.93), rgba(23, 16, 13, 0.62)),
+        linear-gradient(180deg, rgba(23, 16, 13, 0.2), rgba(23, 16, 13, 0.9)),
+        url("foto-folhas.jpg") center / cover;
+    border-bottom: 10px solid var(--coal);
+}
+
+.topbar {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    font-family: "Passion One", Impact, sans-serif;
+    font-size: 1.45rem;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 250, 240, 0.22);
+    border-radius: 999px;
+    background: rgba(255, 250, 240, 0.08);
+    color: var(--white);
+    font-size: 0.88rem;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: var(--white);
+    color: var(--coal);
+}
+
+.hero__content {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    align-self: center;
+    padding: 74px 0 110px;
+}
+
+.hero h1 {
+    max-width: 820px;
+    margin: 10px 0 18px;
+    font-family: "Passion One", Impact, sans-serif;
+    font-size: clamp(3.4rem, 9vw, 7.6rem);
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.34);
+}
+
+.hero__content > p:not(.eyebrow) {
+    max-width: 650px;
+    color: rgba(255, 250, 240, 0.88);
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.eyebrow {
+    color: var(--sun);
+    font-family: "Spectral", Georgia, serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.button {
+    display: inline-flex;
+    margin-top: 28px;
+    padding: 13px 18px;
+    border: 2px solid var(--sun);
+    border-radius: var(--radius);
+    background: var(--sun);
+    color: var(--coal);
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.35);
+}
+
+.button:hover {
+    background: var(--white);
+    color: var(--coal);
+}
+
+.intro,
+.authors,
+.credits {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.75fr) 1fr;
+    gap: 34px;
+    padding: 72px 0;
+    border-bottom: 2px solid rgba(47, 98, 72, 0.28);
+}
+
+h2 {
+    font-family: "Passion One", Impact, sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.intro > p {
+    color: var(--muted);
+    font-size: clamp(1.08rem, 2vw, 1.35rem);
+}
+
+.poem {
+    position: relative;
+    width: min(980px, calc(100% - 32px));
+    margin: 84px auto;
+    padding: clamp(28px, 6vw, 68px);
+    background:
+        linear-gradient(90deg, rgba(36, 21, 16, 0.08) 1px, transparent 1px) 0 0 / 18px 18px,
+        var(--white);
+    border: 4px solid var(--ink);
+    box-shadow: var(--shadow), 12px 12px 0 var(--terra);
+}
+
+.poem::before,
+.poem::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(36, 21, 16, 0.26);
+    pointer-events: none;
+}
+
+.poem::after {
+    inset: 22px;
+    border-style: dashed;
+}
+
+.poem__header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 3px double rgba(36, 21, 16, 0.28);
+}
+
+.poem__header h2 {
+    margin: 8px 0;
+}
+
+.poem__header p:not(.eyebrow) {
+    color: var(--muted);
+}
+
+.stanzas {
+    position: relative;
+    z-index: 1;
+    columns: 2 280px;
+    column-gap: clamp(30px, 5vw, 64px);
+}
+
+.stanzas p {
+    break-inside: avoid;
+    margin: 0 0 2.1rem;
+    font-family: "Sriracha", cursive;
+    font-size: clamp(1.18rem, 2.2vw, 1.55rem);
+    line-height: 1.95;
+}
+
+.image-band {
+    min-height: 430px;
+    display: grid;
+    place-items: center;
+    margin: 96px 0;
+    padding: 72px 16px;
+    color: var(--white);
+    background-attachment: fixed;
+    border-block: 10px solid var(--coal);
+}
+
+.image-band--first {
+    background:
+        linear-gradient(90deg, rgba(23, 16, 13, 0.92), rgba(23, 16, 13, 0.36)),
+        url("foto-joaninha.jpg") right center / cover;
+}
+
+.image-band--second {
+    background:
+        linear-gradient(90deg, rgba(23, 16, 13, 0.36), rgba(23, 16, 13, 0.92)),
+        url("foto-folhas.jpg") center / cover;
+}
+
+.image-band div {
+    width: min(920px, 100%);
+}
+
+.image-band h2 {
+    max-width: 780px;
+    margin-top: 10px;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.45);
+}
+
+.section-heading {
+    max-width: 780px;
+    margin-bottom: 34px;
+}
+
+.section-heading h2 {
+    margin: 8px 0 16px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.poem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.literary-card {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: var(--white);
+    border: 3px solid var(--ink);
+    border-radius: var(--radius);
+    box-shadow: 7px 7px 0 rgba(36, 21, 16, 0.16);
+}
+
+.literary-card:nth-child(2) {
+    border-color: var(--cacto);
+}
+
+.literary-card:nth-child(2) span {
+    color: var(--cacto);
+}
+
+.literary-card:nth-child(3) {
+    border-color: var(--anil);
+}
+
+.literary-card:nth-child(3) span {
+    color: var(--anil);
+}
+
+.literary-card--dark {
+    background: var(--coal);
+    color: var(--white);
+}
+
+.literary-card span {
+    color: var(--terra);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.literary-card--dark span {
+    color: var(--sun);
+}
+
+.literary-card h3 {
+    margin: 10px 0 14px;
+    font-family: "Passion One", Impact, sans-serif;
+    font-size: 2.25rem;
+    line-height: 0.95;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.literary-card p {
+    color: var(--muted);
+}
+
+.literary-card--dark p {
+    color: rgba(255, 250, 240, 0.75);
+}
+
+.literary-card a {
+    margin-top: auto;
+    padding-top: 22px;
+    color: currentColor;
+}
+
+.credits {
+    padding: 88px 0;
+}
+
+.credits h2 {
+    margin: 8px 0 28px;
+}
+
+.credits__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.credits__grid p {
+    padding: 22px;
+    background: rgba(255, 250, 240, 0.72);
+    border-left: 5px solid var(--cacto);
+    box-shadow: 0 16px 40px rgba(36, 21, 16, 0.1);
 }
 
 footer {
-    background-color: black;
-    text-align: center;
-    color: white;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px max(16px, calc((100% - 1120px) / 2));
+    background: var(--coal);
+    color: var(--white);
 }
 
-section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
-    font-family: var(--fonte3);
-    font-size: 3vw;
+footer a {
+    color: var(--sun);
 }
 
-section>p {
-    padding-bottom: 2em;
+@media (max-width: 820px) {
+    .topbar,
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .intro,
+    .credits__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .poem-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .image-band {
+        background-attachment: scroll;
+    }
 }
 
+@media (max-width: 560px) {
+    .hero {
+        min-height: auto;
+    }
 
-section.normal {
-    background-color: white;
-    color: black;
-}
+    .hero__content {
+        padding: 54px 0 80px;
+    }
 
-section.imagem {
-    background-color: rgb(80, 80, 80);
-    color: white;
-    box-shadow: inset 6px 6px 20px 0px rgba(5, 5, 5, 0.644);
-    background-attachment: fixed;
-}
+    .menu {
+        width: 100%;
+    }
 
-section.imagem>p {
-    background-color: rgba(0, 0, 0, 0.696);
-    display: inline-block;
-    padding: 10px;
-    text-shadow: 1px 1px 0px black;
-}
+    .menu a {
+        flex: 1;
+        text-align: center;
+    }
 
-section#img1 {
-    background-image: url(foto-joaninha.jpg);
-    background-position: right center;
-    background-size: cover;
+    .poem {
+        margin: 56px auto;
+        box-shadow: 7px 7px 0 var(--terra);
+    }
 
-}
+    .poem::before,
+    .poem::after {
+        display: none;
+    }
 
-section#img2 {
-    background-image: url(foto-folhas.jpg);
-    background-position: right center;
-    background-size: cover;
+    .stanzas {
+        columns: 1;
+    }
+
+    .poem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-band {
+        min-height: 340px;
+        margin: 64px 0;
+    }
 }
